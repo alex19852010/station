@@ -6,6 +6,7 @@
 using namespace std;
 
 mutex mtx;
+mutex mtx2;
 int train_count = 0;
 
 void road(string train_name, int travel_time)
@@ -17,20 +18,14 @@ void road(string train_name, int travel_time)
     mtx.lock();
     cout << "train " << train_name << " arrived at the station" << endl;
     mtx.unlock();
-    // unique_lock<mutex> lock(mtx);
-    // train_count++;
 
-    // cout << "Train " << train_name << " has arrived at the station." << endl;
+    mtx2.lock();
+    this_thread :: sleep_for(chrono :: seconds(1));
+    cout << "depart train " << train_name << endl;
+    mtx2.unlock();
 
-    // while (train_count > 1) {
-    //     cout << "Train " << train_name << " is waiting for the station to be available." << endl;
-    //     lock.unlock();
-    //     this_thread::sleep_for(chrono::seconds(1));
-    //     lock.lock();
-    // }
+    cout << "train " << train_name << " departing from the station" << endl;
 
-    // cout << "Train " << train_name << " is departing from the station." << endl;
-    // train_count--;
 }
 
 int main()
