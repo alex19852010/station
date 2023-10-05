@@ -7,7 +7,7 @@ using namespace std;
 
 mutex mtx;
 mutex mtx2;
-int train_count = 0;
+string command;
 
 void road(string train_name, int travel_time)
 {
@@ -20,8 +20,17 @@ void road(string train_name, int travel_time)
     mtx.unlock();
 
     mtx2.lock();
-    this_thread :: sleep_for(chrono :: seconds(1));
-    cout << "depart train " << train_name << endl;
+    
+    while(command != "depart")
+    {
+        cout << "enter command depart for " << train_name << endl;
+        cin >> command;
+        if (command == "depart")
+        {
+            command = "";
+            break;
+        }
+    }
     mtx2.unlock();
 
     cout << "train " << train_name << " departing from the station" << endl;
@@ -30,13 +39,14 @@ void road(string train_name, int travel_time)
 
 int main()
 {
-    thread a (road, "A", 5); 
-    thread b (road, "B", 10); 
-    thread c (road, "C", 15); 
+    thread a (road, "A", 7); 
+    thread b (road, "B", 14); 
+    thread c (road, "C", 21); 
 
     a.join();
     b.join();
     c.join();
 
     return 0;
-}
+
+     }
