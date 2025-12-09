@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/Viktoria/Desktop/station/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/http_ready.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\http_ready.dir\\main.cpp.obj -c C:\\Users\\Viktoria\\Desktop\\station\\main.cpp",
+  "file": "C:/Users/Viktoria/Desktop/station/main.cpp",
+  "output": "CMakeFiles/http_ready.dir/main.cpp.obj"
+}
+]

@@ -1,0 +1,3 @@
+C:/Users/Viktoria/Desktop/station/build/CMakeFiles/http_ready.dir
+C:/Users/Viktoria/Desktop/station/build/CMakeFiles/edit_cache.dir
+C:/Users/Viktoria/Desktop/station/build/CMakeFiles/rebuild_cache.dir

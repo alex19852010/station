@@ -1,1 +1,0 @@
-string r = "hello world";
