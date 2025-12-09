@@ -8,7 +8,7 @@
 int main()
 {
     
-cout << "hello Alex" << endl;
+cout << "hello Fedor" << endl;
 
 return 0;
 
